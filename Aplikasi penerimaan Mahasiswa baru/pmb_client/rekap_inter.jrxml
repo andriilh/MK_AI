@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="708" pageHeight="907" columnWidth="668" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT petugas, COUNT( petugas ) AS  'Jumlah Interview'
+FROM tb_wawancara
+GROUP BY petugas]]>
+	</queryString>
+	<field name="petugas" class="java.lang.String"/>
+	<field name="Jumlah Interview" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="-1" width="544" height="27"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LEMBAGA PENDIDIKAN DAN PENGEMBANGAN PROFESI INDONESIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="26" width="544" height="27"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LP3I BUSINESS COLLEGE BANDA ACEH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="53" width="544" height="27"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Sultan Hotel No. 36-38 Peunayong]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="0" width="103" height="81"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\radhial22\\Desktop\\1.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="5" width="213" height="20"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REKAPITULASI INTERVIEW]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="169" height="20"/>
+				<textElement/>
+				<text><![CDATA[Petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="126" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jumlah Interview]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="169" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="0" width="126" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{Jumlah Interview}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

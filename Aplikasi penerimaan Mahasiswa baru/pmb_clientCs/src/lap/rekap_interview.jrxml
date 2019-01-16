@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="737" pageHeight="907" columnWidth="697" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.9090909090909108"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="jumlah_interview" class="java.lang.Integer"/>
+	<field name="tb_pewawancara_kd_pewawancara" class="java.lang.String"/>
+	<field name="tb_pewawancara_nama" class="java.lang.String"/>
+	<field name="tb_wawancara_petugas" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="90" y="0" width="609" height="32" forecolor="#FFFFFF" backcolor="#333333"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LEMBAGA PENDIDIKAN DAN PENGEMBANGAN PROFESI INDONESIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="90" y="32" width="609" height="32" forecolor="#FFFFFF" backcolor="#333333"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LP3I BUSINESS COLLEGE BANDA ACEH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="90" y="64" width="609" height="32" forecolor="#FFFFFF" backcolor="#333333"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Sultan Hotel No. 36-38 Peunayong]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="0" width="104" height="96"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\radhial22\\Documents\\NetBeansProjects\\pmb_clientCs\\build\\classes\\lap\\logo lp3i.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="3" width="216" height="32"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REKAPITULASI INTERVIEW]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="277" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA PETUGAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="277" y="0" width="277" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH INTERVIEW]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="2" width="554" height="1"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="5" width="277" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tb_pewawancara_nama}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="277" y="5" width="277" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{jumlah_interview}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="87" splitType="Stretch">
+			<textField pattern="dd MMM yyyy">
+				<reportElement x="94" y="22" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="67" width="152" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PO PMB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="22" width="73" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Banda Aceh, ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="67" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

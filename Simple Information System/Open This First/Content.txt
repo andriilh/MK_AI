@@ -1,0 +1,10 @@
+
+***Simple Student Information System***
+
+
+Contents
+I. Netbeans IDE 6.9.1 / 7.0
+II. JDK 6/7 but in this application I use JDK 7.
+III. MySQL essential-5.1
+IV. mysql-connector-odbc-5.1
+V. MySQL GUI Like SQLYog, Navicat or any third party software.

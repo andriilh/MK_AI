@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="784" pageHeight="842" columnWidth="744" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0000000000000024"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="tb_inggris_no_ujian" class="java.lang.String"/>
+	<field name="tb_inggris_tgl" class="java.sql.Date"/>
+	<field name="tb_inggris_grade" class="java.lang.String"/>
+	<field name="tb_wawancara_no_ujian" class="java.lang.String"/>
+	<field name="tb_wawancara_no_aplikan" class="java.lang.String"/>
+	<field name="tb_wawancara_nama" class="java.lang.String"/>
+	<field name="tb_wawancara_jurusan" class="java.lang.String"/>
+	<field name="tgl1" class="java.sql.Date"/>
+	<field name="tgl2" class="java.sql.Date"/>
+	<group name="jurusan">
+		<groupExpression><![CDATA[$F{tb_wawancara_jurusan}]]></groupExpression>
+		<groupHeader>
+			<band height="41">
+				<textField>
+					<reportElement x="0" y="0" width="254" height="26"/>
+					<textElement>
+						<font size="15" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{tb_wawancara_jurusan}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="104" y="32" width="640" height="32" forecolor="#FFFFFF" backcolor="#333333"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LP3I BUSINESS COLLEGE BANDA ACEH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="104" y="64" width="640" height="32" forecolor="#FFFFFF" backcolor="#333333"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Sultan Hotel No. 36-38 Peunayong]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="104" y="0" width="640" height="32" forecolor="#FFFFFF" backcolor="#333333"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[LEMBAGA PENDIDIKAN DAN PENGEMBANGAN PROFESI INDONESIA]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="-6" width="127" height="102"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\radhial22\\Documents\\NetBeansProjects\\pmb_clientCs\\build\\classes\\lap\\logo lp3i.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="13" width="294" height="32"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PENGUMUMAN UJIAN PERTANGGAL]]></text>
+			</staticText>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="471" y="45" width="118" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{tgl1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="610" y="45" width="132" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{tgl2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="385" y="45" width="86" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Uji]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="589" y="45" width="21" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="4" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="151" y="0" width="154" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Aplikan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="0" width="227" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="151" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Ujian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="577" y="0" width="167" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lulus di jurusan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="0" width="45" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grade]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="22" width="744" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="23" width="151" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tb_inggris_no_ujian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="23" width="154" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tb_wawancara_no_aplikan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="23" width="227" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tb_wawancara_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="532" y="23" width="45" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tb_inggris_grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="577" y="23" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tb_wawancara_jurusan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="94" splitType="Stretch">
+			<textField pattern="dd MMM yyyy">
+				<reportElement x="96" y="16" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="16" width="73" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Banda Aceh, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="61" width="152" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PO PMB]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="11" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="14" splitType="Stretch"/>
+	</summary>
+</jasperReport>
